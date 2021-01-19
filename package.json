@@ -1,0 +1,28 @@
+{
+  "name": "dhcp_parser",
+  "version": "1.0.0",
+  "description": "Programa para hacer un parsing del dhcpd.conf de CDM.",
+  "main": "dhcpParser.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmourazos/dhcp_parser.git"
+  },
+  "keywords": [
+    "node",
+    "javascript",
+    "dhcp"
+  ],
+  "author": "Manuel Mourazos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmourazos/dhcp_parser/issues"
+  },
+  "homepage": "https://github.com/mmourazos/dhcp_parser#readme",
+  "devDependencies": {
+    "ava": "^3.15.0",
+    "standard": "^16.0.3"
+  }
+}
