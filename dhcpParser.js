@@ -18,9 +18,11 @@ function getLines (text) {
 
 function linesToBlocks (lines) {
   for (const line of lines) {
-    // Skip until "#!" tag found
-    const blockTag = /^#!(w)/.match(line)
-    if (
+    // Saltar las líneas hasta que se endcentre el primer bloque "#!"
+    const blockTag = /^(?:#!)\s*([^,]+),\s*([^,]+)?/.match(line)
+    if (blockTag) {
+      // tendrá uno o dos grupos: El primer grupo es el nombre del bloque, el segundo será el comentario.
+    }
   }
 }
 
