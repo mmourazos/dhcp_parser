@@ -1,6 +1,6 @@
 const test = require('ava')
 
-const { getText, getLines, writeOutputToFile } = require('../dhcpParser')
+const { Block, getText, getLines, writeOutputToFile } = require('../dhcpParser')
 
 test('Read file (async)', async t => {
   const readedText = await getText('./test/test.txt')
@@ -20,3 +20,11 @@ test('Text to array of lines', async t => {
   // t.is(expectedLines, actualLines)
   t.deepEqual(expectedLines, actualLines)
 })
+
+test('Get a Block from a line', t => {
+  const line = '#! ¡Hola mundo!, Un saludo a este mundo cruel '
+  const expectedBlock = new Block('¡Hola mundo!', 'Un saludo a este mundo cruel')
+  t.deepEqual(expectedBlock, Block.getBlockFromLine(line))
+})
+
+test('Conf. to blocks')
